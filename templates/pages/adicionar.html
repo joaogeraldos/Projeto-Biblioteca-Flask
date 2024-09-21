@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Adicionar</h1>
+        <section class="content livro">
+            <h2>Livro</h2>
+            
+            <form action="/adicionar" method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+
+
+                <div class="livro">
+                    <div class="form">
+                        {{ form.titulo.label }} {{ form.titulo }}
+                        {% for error in form.titulo.erros %}
+                            <div class="erro"> {{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ form.descricao.label }} {{ form.descricao }}
+                        {% for error in form.descricao.erros %}
+                            <div class="erro">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ form.sub_titulo.label }} {{ form.sub_titulo }}
+                        {% for error in form.sub_titulo.erros %}
+                            <div class="erro"> {{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ form.editora.label }} {{ form.editora }}
+                        {% for error in form.editora.erros %}
+                            <div class="erro"> {{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ form.tema.label }} {{ form.tema }}
+                        {% for error in form.tema.erros %}
+                            <div class="erro"> {{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ form.colecao.label }} {{ form.colecao }}
+                        {% for error in form.colecao.erros %}
+                            <div class="erro"> {{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ form.paginas.label }} {{ form.paginas }}
+                        {% for error in form.paginas.erros %}
+                            <div class="erro"> {{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ form.conteudo.label }} {{ form.conteudo }}
+                        {% for error in form.conteudo.erros %}
+                            <div class="erro"> {{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ form.img.label }} {{ form.img }}
+                        {% for error in form.img.erros %}
+                            <div class="erro"> {{ error }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <h1>Autor</h1>
+
+               
+                {% for autor in form.autores %}
+                    {{ autor.hidden_tag() }}
+                    <div class="form">
+                        {{ autor.nome_autor.label }} {{ autor.nome_autor }}
+                        {% for error in autor.nome_autor.erros %}
+                                <div class="erro"> {{ error }}</div>
+                            {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ autor.descricao_autor.label }} {{ autor.descricao_autor }}
+                        {% for error in autor.descricao_autor.erros %}
+                                <div class="erro"> {{ error }}</div>
+                            {% endfor %}
+                    </div>
+
+                    <div class="form">
+                        {{ autor.img_autor.label }} {{ autor.img_autor }}
+                        {% for error in autor.img_autor.erros %}
+                                <div class="erro"> {{ error }}</div>
+                            {% endfor %}
+                    </div>
+                    <div class="form">
+                        {{ autor.submit }}
+                    </div>
+                {% endfor %}
+                    
+            </form>
+        </section>
+
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(22, 22, 22);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    width: 40rem;
+    color: white;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    background-color: rgba(97, 97, 97, 0.795);
+    text-shadow: 1px 1px 2px black;
+    border-radius: 5px;
+}
+
+.container form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+#admin {
+    margin-bottom: 20px;
+}
+
+#username {
+    width: 20rem;
+    padding: 8px;
+    margin: 0 0 5px 2px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.671);
+}
+
+#username:focus {
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 6px black;
+}
+
+#senha {
+    width: 20rem;
+    padding: 8px;
+    margin: 5px 0 30px 32px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.671);
+}
+
+#senha:focus {
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 6px black;
+}
+
+.botao {
+    margin: 10px auto 0 auto;
+}
+
+.botao #entrar {
+    width: 100px;
+    height: 35px;
+}
